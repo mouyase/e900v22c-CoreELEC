@@ -1,0 +1,20 @@
+name: Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y make gcc git texinfo gzip squashfs-tools
+
+      - name: Build
+        run: ./build
