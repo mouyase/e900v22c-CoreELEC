@@ -20,3 +20,6 @@ jobs:
         run: |
           chmod +x build.sh 
           ./build.sh
+     
+      - name: SSH connection to Actions
+        uses: P3TERX/ssh2actions@v1.0.0
