@@ -23,6 +23,7 @@ jobs:
           mkdir artifacts
           mv *.img.gz artifacts/
           mv *.img.gz.sha256 artifacts/
+      
       - name: Update
       - uses: actions/download-artifact@v3
         with:
