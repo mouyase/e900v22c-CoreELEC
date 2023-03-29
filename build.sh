@@ -1,5 +1,5 @@
 #! /bin/sh
-releases_url=https://api.github.com/repos/open-tdp/tdp-cloud/releases/latest
+releases=https://api.github.com/repos/CoreELEC/CoreELEC/releases/latest
 version=`curl $releases_url | grep tag_name | cut -f4 -d "\""`
 source_img_name="CoreELEC-Amlogic-ng.arm-${version}-Generic"
 source_img_file="${source_img_name}.img.gz"
